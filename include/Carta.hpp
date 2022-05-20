@@ -10,10 +10,11 @@ using namespace std;
 class Carta{
     protected:
         int id;
+        int numero;
         string palo;
         string alias;
     public:
-        Carta(int _id , string _palo );
+        Carta(int _id , int _numero, string _palo );
         string getAlias();
 
 };

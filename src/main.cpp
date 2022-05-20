@@ -1,12 +1,16 @@
 #include <Carta.hpp>
+#include <Espanola.hpp>
 
 using namespace std;
 
 int main()
 {
-    Carta ca(12,"bastos");
-    Carta ca2(6,"oros");
-    cout<<ca.getAlias()<<endl;
+    Espanola esp;
+    Espanola comod(true);
+
+
+    cout<<comod.cartasRestantes()<<endl;
+    comod.imprimirRestantes();
 
     int a;
     cin>>a;

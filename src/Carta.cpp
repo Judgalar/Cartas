@@ -1,30 +1,39 @@
 #include <Carta.hpp>
 
-Carta::Carta( int _id , string _palo )
+Carta::Carta( int _id , int _numero , string _palo )
 {
     id  = _id;
+    numero = _numero;
     palo = _palo;
-    alias = std::to_string(id) + " de " + palo;
+    alias = std::to_string(numero) + " de " + palo;
 
     if ( palo == "oros" ){
-        if(id == 10) alias = "Sota de oros";
-        if(id == 11) alias = "Caballo de oros";
-        if(id == 12) alias = "Rey de oros";
+        if(numero == 1 ) alias = "As de oros";
+        if(numero == 10) alias = "Sota de oros";
+        if(numero == 11) alias = "Caballo de oros";
+        if(numero == 12) alias = "Rey de oros";
     }
     if ( palo == "copas" ){
-        if(id == 10) alias = "Sota de copas";
-        if(id == 11) alias = "Caballo de copas";
-        if(id == 12) alias = "Rey de copas";
+        if(numero == 1 ) alias = "As de copas";
+        if(numero == 10) alias = "Sota de copas";
+        if(numero == 11) alias = "Caballo de copas";
+        if(numero == 12) alias = "Rey de copas";
     }
     if ( palo == "bastos" ){
-        if(id == 10) alias = "Sota de bastos";
-        if(id == 11) alias = "Caballo de bastos";
-        if(id == 12) alias = "Rey de bastos";
+        if(numero == 1 ) alias = "As de bastos";
+        if(numero == 10) alias = "Sota de bastos";
+        if(numero == 11) alias = "Caballo de bastos";
+        if(numero == 12) alias = "Rey de bastos";
     }
     if ( palo == "espadas" ){
-        if(id == 10) alias = "Sota de espadas";
-        if(id == 11) alias = "Caballo de espadas";
-        if(id == 12) alias = "Rey de espadas";
+        if(numero == 1 ) alias = "As de espadas";
+        if(numero == 10) alias = "Sota de espadas";
+        if(numero == 11) alias = "Caballo de espadas";
+        if(numero == 12) alias = "Rey de espadas";
+    }
+    if( palo=="comodin"){
+        numero = 0;
+        alias = "comodin";
     }
 
 

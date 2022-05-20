@@ -20,14 +20,15 @@ class Baraja
     public:
         void imprimirRestantes();
         int cartasRestantes();
-        int cartasTotales();
-        void reset();
-        virtual void ordenar()=0;
-        friend ostream& operator<<(ostream& o, const Baraja&b);
         int cartasSacadas();
-        Carta getCarta();
-        Carta robar();
-        void addCarta(Carta c);
+        int cartasTotales();
+      //  void reset();
+       // virtual void ordenar()=0;
+       // friend ostream& operator<<(ostream& o, const Baraja&b);
+        
+       // Carta getCarta();
+       // Carta robar();
+       void addCarta(Carta c);
 };
 
 #endif

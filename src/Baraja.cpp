@@ -20,11 +20,6 @@ int Baraja::cartasRestantes()
     return numeroCartas;
 }
 
-void Baraja::reset()
-{
-
-}
-
 int Baraja::cartasSacadas()
 {
     int cartasSacadas;
@@ -42,8 +37,32 @@ int Baraja::cartasTotales()
     return totales;
 }
 
+/* void Baraja::reset()
+{
+
+}
+
+Carta Baraja::getCarta()
+{
+    
+}
+
+Carta Baraja::robar(){
+    getCarta();
+}Carta Baraja::getCarta()
+{
+    
+}
+
+Carta Baraja::robar(){
+    getCarta();
+}
+
+*/
+
 
 
 void Baraja::addCarta(Carta c){
     mazo.push_back(c);
 }
+
