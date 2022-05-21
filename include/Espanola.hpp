@@ -5,10 +5,11 @@
 
 class Espanola : public Baraja{
     protected:
+        bool comodin;
     public:
-        Espanola();
-        Espanola(bool comodin);
-        //void ordenar();
+        Espanola(bool _comodin);
+        void reset();
+        void ordenar();
 };
 
 

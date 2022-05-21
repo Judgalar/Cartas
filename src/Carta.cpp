@@ -1,5 +1,9 @@
 #include <Carta.hpp>
 
+Carta::Carta(){
+
+}
+
 Carta::Carta( int _id , int _numero , string _palo )
 {
     id  = _id;
@@ -39,6 +43,34 @@ Carta::Carta( int _id , int _numero , string _palo )
 
 }
 
+int Carta::getId(){
+    return id;
+}
+
+int Carta::getNumero(){
+    return numero;
+}
+
+string Carta::getPalo(){
+    return palo;
+}
+
 string Carta::getAlias(){
     return alias;
+}
+
+void Carta::setId(int _id){
+    id = _id;
+}
+
+void Carta::setNumero(int _numero){
+    numero = _numero;
+}
+
+void Carta::setPalo(string _palo){
+    palo = _palo;
+}
+
+void Carta::setAlias(string _alias){
+    alias = _alias;
 }

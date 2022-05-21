@@ -1,16 +1,21 @@
 #include <Carta.hpp>
 #include <Espanola.hpp>
+#include <EspanolaSimple.hpp>
 
 using namespace std;
 
 int main()
 {
-    Espanola esp;
-    Espanola comod(true);
+    Espanola esp(true);
+    EspanolaSimple simp(false);
 
 
-    cout<<comod.cartasRestantes()<<endl;
-    comod.imprimirRestantes();
+    cout<<esp.cartasRestantes()<<endl;
+    simp.getCarta();
+
+    
+    simp.ordenar();
+
 
     int a;
     cin>>a;
