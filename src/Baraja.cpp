@@ -53,6 +53,28 @@ void Baraja::reset()
     sacadas.clear();
 }
 
+void Baraja::ordenar()
+{
+    bool ordenada = false;
+    while(ordenada != true)
+    {
+        ordenada=true;
+        for(vector<Carta>::iterator it = mazo.begin() ; it != mazo.end() ; it++){
+            auto it2 = it+1;
+            if( it->getId() > it2->getId() ){
+                swap(it,it2);
+                ordenada=false;
+            }
+        }
+    }
+}
+
+ostream& operator<<(ostream& o,  Baraja&b){
+    o << b.cartasTotales()<<"estas son las cartas totales: "<<endl;
+    o << b.cartasSacadas()<<"estas son las cartas sacadas: "<<endl;
+    o << b.cartasRestantes()<<"estas son las cartas restantes: "<<endl;
+    return o;
+}
 
 Carta Baraja::getCarta()
 {   
@@ -71,11 +93,12 @@ Carta Baraja::getCarta()
     for(auto it = mazo.begin() ; it != mazo.end() ; it++)
     {
         if(i == aleatorio){
-            cout<<it->getAlias()<<endl;
+            cout<<it->getAlias()<<" de "<<it->getPalo()<<endl;
             c.setId( it->getId() );
             c.setNumero ( it->getNumero() );
             c.setPalo ( it->getPalo() );
             c.setAlias ( it->getAlias() );
+            c.setSimbolo ( it->getSimbolo() );
             
             it = mazo.erase(it);
 
@@ -94,13 +117,6 @@ Carta Baraja::getCarta()
 
 Carta Baraja::robar(){
     return getCarta();
-}
-
-ostream& operator<<(ostream& o,  Baraja&b){
-    o << b.cartasTotales()<<"estas son las cartas totales: "<<endl;
-    o << b.cartasSacadas()<<"estas son las cartas sacadas: "<<endl;
-    o << b.cartasRestantes()<<"estas son las cartas restantes: "<<endl;
-    return o;
 }
 
 void Baraja::addCarta(Carta c){

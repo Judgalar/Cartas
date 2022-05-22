@@ -106,19 +106,3 @@ void Espanola::reset()
         }
     }
 }
-
-void Espanola::ordenar()
-{
-    bool ordenada = false;
-    while(ordenada != true)
-    {
-        ordenada=true;
-        for(vector<Carta>::iterator it = mazo.begin() ; it != mazo.end() ; it++){
-            auto it2 = it+1;
-            if( it->getId() > it2->getId() ){
-                swap(it,it2);
-                ordenada=false;
-            }
-        }
-    }
-}

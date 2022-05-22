@@ -25,7 +25,7 @@ class Baraja
         int cartasSacadas();
         int cartasTotales();
         virtual void reset()=0;
-        virtual void ordenar()=0;
+        void ordenar();
         friend ostream& operator<<(ostream& o, const Baraja&b);
         
         Carta getCarta();

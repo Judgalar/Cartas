@@ -9,7 +9,6 @@ class Espanola : public Baraja{
     public:
         Espanola(bool _comodin);
         void reset();
-        void ordenar();
 };
 
 
