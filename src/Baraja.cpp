@@ -7,7 +7,7 @@ void Baraja::imprimirRestantes()
 {
     for(vector<Carta>::iterator it = mazo.begin() ; it<mazo.end() ; it++)
     {
-        cout<<it->getAlias()<<endl;
+        cout<<it->getAlias()<<" de "<<it->getPalo()<<endl;
     }
 }
 
@@ -15,7 +15,7 @@ void Baraja::imprimirSacadas()
 {
     for(vector<Carta>::iterator it = sacadas.begin() ; it<sacadas.end() ; it++)
     {
-        cout<<it->getAlias()<<endl;
+        cout<<it->getAlias()<<" de "<<it->getPalo()<<endl;
     }
 }
 
