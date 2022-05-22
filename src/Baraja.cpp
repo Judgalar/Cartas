@@ -94,6 +94,7 @@ Carta Baraja::getCarta()
     {
         if(i == aleatorio){
             cout<<it->getAlias()<<" de "<<it->getPalo()<<endl;
+            c.setTipo( it->getTipo() );
             c.setId( it->getId() );
             c.setNumero ( it->getNumero() );
             c.setPalo ( it->getPalo() );

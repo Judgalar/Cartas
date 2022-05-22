@@ -26,7 +26,7 @@ Espanola::Espanola(bool _comodin)
                 paloCarta="comodin";
             }
 
-            mazo.push_back(Carta(nCarta,numeroCarta,paloCarta));
+            mazo.push_back(Carta("espanola",nCarta,numeroCarta,paloCarta));
             numeroCarta++;
         }
     }
@@ -48,7 +48,7 @@ Espanola::Espanola(bool _comodin)
                 numeroCarta=1;
             } 
 
-            mazo.push_back(Carta(nCarta,numeroCarta,paloCarta));
+            mazo.push_back(Carta("espanola",nCarta,numeroCarta,paloCarta));
             numeroCarta++;
         }
     }
@@ -79,7 +79,7 @@ void Espanola::reset()
                 paloCarta="comodin";
             }
 
-            mazo.push_back(Carta(nCarta,numeroCarta,paloCarta));
+            mazo.push_back(Carta("espanola",nCarta,numeroCarta,paloCarta));
             numeroCarta++;
         }
     }
@@ -101,7 +101,7 @@ void Espanola::reset()
                 numeroCarta=1;
             } 
 
-            mazo.push_back(Carta(nCarta,numeroCarta,paloCarta));
+            mazo.push_back(Carta("espanola",nCarta,numeroCarta,paloCarta));
             numeroCarta++;
         }
     }

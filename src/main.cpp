@@ -5,6 +5,7 @@
 #include <Francesa.hpp>
 #include <Inglesa.hpp>
 #include <Americana.hpp>
+#include <Tarot.hpp>
 
 
 using namespace std;
@@ -17,6 +18,7 @@ int main()
     Francesa fr;
     Inglesa ing;
     Americana am;
+    Tarot t;
 
     cout<<esp.cartasRestantes()<<endl;
     simp.getCarta();
@@ -30,6 +32,8 @@ int main()
     am.getCarta();
     am.reset();
 
+    t.getCarta();
+    t.reset();
 
     int a;
     cin>>a;

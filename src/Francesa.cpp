@@ -18,7 +18,7 @@ Francesa::Francesa()
             numeroCarta=1;
         } 
 
-        mazo.push_back(Carta(nCarta,numeroCarta,paloCarta));
+        mazo.push_back(Carta("francesa",nCarta,numeroCarta,paloCarta));
         numeroCarta++;
     }
 }
@@ -43,7 +43,7 @@ void Francesa::reset()
             numeroCarta=1;
         } 
 
-        mazo.push_back(Carta(nCarta,numeroCarta,paloCarta));
+        mazo.push_back(Carta("francesa",nCarta,numeroCarta,paloCarta));
         numeroCarta++;
     }
 }

@@ -19,12 +19,14 @@ class Carta{
         Carta();
         Carta( string _tipo , int _id , int _numero, string _palo );
 
+        string getTipo();
         int getId();
         int getNumero();
         string getPalo();
         string getAlias();
         string getSimbolo();
 
+        void setTipo(string);
         void setId(int);
         void setNumero(int);
         void setPalo(string);
