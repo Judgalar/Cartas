@@ -85,7 +85,7 @@ Carta Baraja::getCarta()
         cantidad++;
     }
 
-    srand(time(NULL)); 
+    
     aleatorio = rand() % cantidad ;
 
     int i=0;
@@ -116,11 +116,32 @@ Carta Baraja::getCarta()
     return c;
 }
 
-Carta Baraja::robar(){
-    return getCarta();
+Carta Baraja::robar()
+{
+    Carta c;
+    vector<Carta>::iterator it = mazo.begin();
+    cout<<it->getAlias()<<" de "<<it->getPalo()<<endl;
+    c.setTipo( it->getTipo() );
+    c.setId( it->getId() );
+    c.setNumero ( it->getNumero() );
+    c.setPalo ( it->getPalo() );
+    c.setAlias ( it->getAlias() );
+    c.setSimbolo ( it->getSimbolo() );
+    
+    it = mazo.erase(it);
+    sacadas.push_back(c);
+    
+    return c;
 }
 
 void Baraja::addCarta(Carta c){
     mazo.push_back(c);
 }
 
+void Baraja::barajar()
+{
+    for( int i = 0 ;  i<500 ; i++){
+        addCarta(getCarta());
+    }
+    sacadas.clear();
+}
