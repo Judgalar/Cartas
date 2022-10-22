@@ -286,9 +286,7 @@ void jugar( Espanola &baraja , vector<Carta> &mano , vector<Carta> &oros , vecto
             cartasRestantes = baraja.cartasRestantes();
             
 
-            while(  ( colocarCarta(mano,oros,copas,espadas,bastos,vueltas) ) ==true ){
-                
-            }
+            while( colocarCarta(mano,oros,copas,espadas,bastos,vueltas) );
             
 
             cout<<"-------------------"<<endl;
